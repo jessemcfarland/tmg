@@ -1,0 +1,17 @@
+# /var/lib/tftpboot/pxelinux.cfg/default
+#
+default menu.c32
+prompt 0
+timeout 300
+ontimeout local
+
+menu title PXE Boot
+
+label local
+	menu label Boot from local disk
+  	localboot 0
+
+label build
+	menu label Install CentOS
+	kernel centos/images/pxeboot/vmlinuz
+	append initrd=centos/images/pxeboot/initrd.img network ks=ftp://${FTP_SERVER}/pub/centos/${KS_CFG} devfs=nomount
