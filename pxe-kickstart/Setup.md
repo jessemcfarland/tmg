@@ -29,7 +29,7 @@ sudo find /var/ftp -type f -exec chmod 0644 {} \;
 sudo find /var/ftp -type d -exec chmod 0755 {} \;
 ```
 
-Restart `vsftpd` to activate changes.
+Restart `vsftpd` to activate configuration.
 ```
 sudo systemctl restart vsftpd
 sudo systemctl status vsftpd
@@ -42,7 +42,7 @@ sudo yum install dhcp
 cp dhcpd.conf /etc/dhcp/dhcpd.conf # Replace variables with the appropriate values
 ```
 
-Restart `dhcpd` to activate changes.
+Restart `dhcpd` to activate configuration.
 ```
 sudo systemctl restart dhcpd
 sudo systemctl status dhcpd
